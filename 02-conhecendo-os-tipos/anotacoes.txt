@@ -1,0 +1,23 @@
+• typeof -> Retorna o tipo do dado verificado.
+
+let x: string | number | boolean = 13;
+console.log(typeof (x)) // Number
+
+
+• instanceof -> retorna booleano.
+
+let y: any = [];
+console.log(y instanceof Number);
+
+--------------------------------------------------------------------------------------------------------------
+
+• O tipo "any" é utilizado em casos como uma integração de uma api de terceiros,
+que você não conhece 100% a estrutura do projeto.
+
+--------------------------------------------------------------------------------------------------------------
+
+• A diferença entre "never" e "void", é que o "void" aceita "nulo"(ausência de objeto), ou "undefined"(ausência
+de qualquer valor).
+Já o tipo "never" não pode receber valor qualquer.
+
+--------------------------------------------------------------------------------------------------------------
