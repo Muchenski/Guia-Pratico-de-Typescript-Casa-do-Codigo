@@ -1,0 +1,39 @@
+Compilando um arquivo TS para JS:
+■ tsc <nome do arquivo>.ts
+
+Verificando se compilou da maneira que esperávamos:
+■ node <nome do arquivo>.js
+
+--------------------------------------------------------------------------------------------------------------
+
+O principal arquivo de configuração do typescript é o "tsconfig.json".
+
+Podemos definir:
+    • O caminho em que estão os arquivos ts do nosso projeto, para que sejam compilados.
+    • O diretório destino dos arquivos transpilados.
+    • A versão do ECMAScript que será utilizada.
+    • Se o compilador deve permitir arquivos JS.
+    • Nível de restrição de tipos.
+
+Criando o arquivo "tsconfig.json":
+■ tsc --init
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Se nós desrespeitarmos as tipagens especificadas, por padrão, ainda sim o arquivo TS com erro de compilação irá
+transpilar em um JS.
+
+Caso queiramos que não transpile com erros, devemos descomentar a seguinte configuração do arquivo "tsconfig.json":
+■ "noEmitOnError": true
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Compilando todos arquivos do projeto de uma vez só:
+■ tsc -w
+
+------------------------------------------------------------------------------------------------------------------------------
+
+A configuração "target", do arquivo "tsconfig.json", vem como padrão "es5".
+Nesta propriedade é definida a versão do ECMAScript que será utilizada.
+
+------------------------------------------------------------------------------------------------------------------------------
