@@ -92,8 +92,16 @@ class Multa implements IMulta {
         this._valorFinal = valorFinal;
     }
 
-    set identificador(identificador: string) {
-        this._identificador = identificador;
+    setIdentificador<P extends Pessoa>(pessoa: P) {
+        if (pessoa instanceof PessoaFisica) {
+            this._identificador = pessoa.cpf;
+
+        } else if (pessoa instanceof PessoaJuridica) {
+            this._identificador = pessoa.cnpj;
+
+        } else {
+            this._identificador = "Sem identificador";
+        }
     }
 
     set placaCarroMultado(placaCarroMultado: string) {
@@ -106,17 +114,7 @@ class Multa implements IMulta {
 }
 
 function gerarMulta<P extends Pessoa, C extends Carro>(pessoa: P, carro: C, multa: Multa): Multa {
-
-    if (pessoa instanceof PessoaFisica) {
-        multa.identificador = pessoa.cpf;
-
-    } else if (pessoa instanceof PessoaJuridica) {
-        multa.identificador = pessoa.cnpj;
-
-    } else {
-        multa.identificador = "Sem identificador";
-    }
-
+    multa.setIdentificador(pessoa);
     multa.placaCarroMultado = carro.placa;
     multa.calcular(carro);
     return multa;
