@@ -1,0 +1,25 @@
+• Habilitando os Decorators:
+
+Precisamos, no arquivo de configuração, descomentar a linha:
+■ "experimentalDecorators": true, /* Enables experimental support
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Decorators:
+
+PropertyDecorator , MethodDecorator e ParameterDecorator.
+
+Recebem, no geral, três tipos de parâmetros:
+
+• target: pode ser um método estático ou uma function
+construtora de uma classe.
+
+• propertyKey: nome do membro da instância que será
+utilizado no alvo.
+
+• descriptor: a propriedade descriptor do membro da
+instância, chamando o método Object.getOwnPropertyDescriptor().
+
+OBS: Object.getOwnPropertyDescriptor() retorna um descritor de propriedades para uma outra propriedade.
+
+------------------------------------------------------------------------------------------------------------------------------
