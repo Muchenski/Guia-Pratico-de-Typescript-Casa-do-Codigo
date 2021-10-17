@@ -1,0 +1,13 @@
+Diferença entre namespaces e modules:
+
+Namespaces:
+• Trabalham em escopo global, portanto não precisam ser importados como os modules.
+• A organização é mais lógica.
+• Pode ser utilizado em mais de um arquivo.
+• Não precisam de bibliotecas para serem utilizados.
+
+Modules:
+• Não trabalham em escopo global, por isso precisam da palavra reservada "import".
+• Toda implementação se torna um modulo separado.
+• Precisam de bibliotecas como Require.js, Common.js.
+

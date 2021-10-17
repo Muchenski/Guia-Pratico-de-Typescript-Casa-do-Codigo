@@ -1,0 +1,1 @@
+export class ContaSalario extends Banco.Conta {}
