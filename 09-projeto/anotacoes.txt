@@ -1,0 +1,73 @@
+// >>Executar estes comandos no PowerShell<< \\
+
+--------------------------------------------------------------------------------------------------------------
+
+Mostra todas as informações relacionadas ao Docker Host instalado:
+• docker info
+
+--------------------------------------------------------------------------------------------------------------
+
+Mostra as versões do Docker e suas ferramentas:
+• docker version
+
+--------------------------------------------------------------------------------------------------------------
+
+OBS: Verificar a propriedade OS/Arch(do Client e do Server).
+
+--------------------------------------------------------------------------------------------------------------
+
+Criando um container utilizando a imagem do MongoDB:
+• docker pull tutum/mongodb
+
+Comandos:
+• pull -> puxa a imagem para nossa máquina.
+
+--------------------------------------------------------------------------------------------------------------
+
+Mostra as imagens que estão no computador:
+• docker images
+
+--------------------------------------------------------------------------------------------------------------
+
+Com a imagem na máquina, iremos criar um container Docker para nossa base de dados:
+• docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
+
+Comandos:
+• run -> cria o container.
+
+• -d -> indica que o container deve rodar em background.
+
+• -p -> para indicar as portas que serão utilizadas.
+OBS: -p <porta do host>:<porta para acessar o container>
+
+--------------------------------------------------------------------------------------------------------------
+
+Verificando se o container foi criado corretamente:
+• docker ps
+
+Esse comando lista os contêineres que estão em execução no seu
+computador.
+
+--------------------------------------------------------------------------------------------------------------
+
+Para conectar com o banco, no shell da imagem Docker do MongoDB:
+
+mongo admin -u admin -p OiKrBJ8T7ROP --host <host> --port <port>
+
+--------------------------------------------------------------------------------------------------------------
+
+Os pacotes com @type, são pacotes interfaces Typescript, que nos permitem trabalhar com Javascript. 
+Necessitamos disso para podermos trabalhar em nosso ambiente de desenvolvimento com o Typescript.
+
+Ex:
+
+npm i typescript express mongoose --save
+npm i @types/express @types/mongoose --save-dev
+
+--------------------------------------------------------------------------------------------------------------
+
+tsyringe : esse pacote nos permite trabalhar com injeção de
+dependência.
+
+reflect-metadata : esse pacote nos permite trabalhar com os types
+em tempo de execução.

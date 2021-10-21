@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true, // permite importarmos os módulos CommonJS em conformidade com as especificações do target es6.
+    "outDir": "dist", // diretório de destino onde serão transpilados os nossos arquivos.
+    "incremental": true, // Salva as últimas alterações para não re-compilar os arquivos que não foram alterados.
+    "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "../node_modules/@types" // caminho dos pacotes @types que nós importaremos para trabalhar com TypeScript
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [ //  local onde o compilador deve procurar os nossos arquivos para fazer o transpile
+    "src/**/*.ts"
+  ],
+  "exclude": [ // os diretórios que devem ser ignorados no momento do transpile.
+    "node_modules"
+  ]
+}
